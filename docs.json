@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Reset Password",
+    "content": "Users can reset password from Settings > Security."
+  },
+  {
+    "title": "Refund Policy",
+    "content": "Refunds are allowed within 7 days of purchase."
+  },
+  {
+    "title": "Account Deletion",
+    "content": "To delete your account, go to Settings > Privacy and click 'Delete Account'. This action is irreversible."
+  },
+  {
+    "title": "Subscription Plans",
+    "content": "We offer Basic, Pro, and Enterprise plans. Basic is free, Pro is $10/month, and Enterprise is custom pricing."
+  },
+  {
+    "title": "Contact Support",
+    "content": "You can reach our support team by emailing support@example.com."
+  }
+]
