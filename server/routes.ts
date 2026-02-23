@@ -7,9 +7,9 @@ import rateLimit from "express-rate-limit";
 import fs from "fs";
 import OpenAI from "openai";
 
-const openai = new OpenAI({
-  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
-  baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
+const openrouter = new OpenAI({
+  apiKey: process.env.AI_INTEGRATIONS_OPENROUTER_API_KEY,
+  baseURL: process.env.AI_INTEGRATIONS_OPENROUTER_BASE_URL,
 });
 
 const docs = JSON.parse(fs.readFileSync("docs.json", "utf-8"));
@@ -90,8 +90,8 @@ Strict Rules:
         ...recentMessages
       ];
 
-      const response = await openai.chat.completions.create({
-        model: "gpt-5.1",
+      const response = await openrouter.chat.completions.create({
+        model: "x-ai/grok-4.1-fast",
         messages: messagesForLLM,
       });
 
