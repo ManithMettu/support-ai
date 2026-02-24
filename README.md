@@ -2,6 +2,11 @@
 
 A full-stack AI-powered chat support application built with React, Express, and Groq AI. The application provides intelligent responses based on product documentation using RAG (Retrieval-Augmented Generation) principles with embeddings and similarity search.
 
+## 🌐 Live Demo
+
+- **Frontend**: [https://support-ai-inky.vercel.app](https://support-ai-inky.vercel.app)
+- **Backend API**: [https://support-ai-rd0r.onrender.com](https://support-ai-rd0r.onrender.com)
+
 ## 📚 Documentation
 
 - **[README.md](./README.md)** - You are here (main documentation)
