@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "NODE_ENV=development node --env-file=.env --import tsx index.ts",
         "build": "node build.js",
-        "start": "NODE_ENV=production node dist/index.js",
+        "start": "NODE_ENV=production node --env-file=.env dist/index.js",
         "db:push": "drizzle-kit push",
         "test": "vitest run",
         "test:watch": "vitest",
