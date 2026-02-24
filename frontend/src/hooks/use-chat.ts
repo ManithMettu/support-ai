@@ -37,7 +37,8 @@ export function useSessionsList() {
   return useQuery({
     queryKey: [api.sessions.list.path],
     queryFn: async () => {
-      const res = await fetch(api.sessions.list.path, { credentials: "include" });
+      const url = buildUrl(api.sessions.list.path);
+      const res = await fetch(url, { credentials: "include" });
       if (!res.ok) throw new Error("Failed to fetch sessions");
       const data = await res.json();
       return api.sessions.list.responses[200].parse(data);
@@ -78,7 +79,7 @@ export function useSendMessage(sessionId: string) {
       // Validate payload just to be safe
       const validated = api.chat.create.input.parse(payload);
 
-      const res = await fetch(api.chat.create.path, {
+      const res = await fetch(buildUrl(api.chat.create.path), {
         method: api.chat.create.method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(validated),

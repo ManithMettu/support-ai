@@ -26,7 +26,7 @@ COPY package*.json ./
 # Install production dependencies only
 RUN npm ci --omit=dev
 
-# Copy built application from builder
+# Copy built application from builder (includes docs.json)
 COPY --from=builder /app/dist ./dist
 
 # Copy necessary files

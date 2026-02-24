@@ -51,7 +51,10 @@ export const api = {
 };
 
 export function buildUrl(path: string, params?: Record<string, string | number>): string {
-  let url = path;
+  // Use environment variable for API base URL, fallback to relative path
+  const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
+  let url = baseUrl + path;
+  
   if (params) {
     Object.entries(params).forEach(([key, value]) => {
       if (url.includes(`:${key}`)) {

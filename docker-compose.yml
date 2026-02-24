@@ -8,9 +8,10 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=5000
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - FRONTEND_URL=${FRONTEND_URL:-*}
     volumes:
       - ./backend/sqlite.db:/app/sqlite.db
-      - ./backend/.env:/app/.env
     restart: unless-stopped
     networks:
       - app-network
